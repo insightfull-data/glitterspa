@@ -29,3 +29,20 @@ All booking buttons point to:
 - This is a showcase/demo homepage.
 - Images are bundled locally inside `/assets`.
 - You can swap any image by replacing the file with the same name.
+
+
+## Owner / Mission Section
+
+This version includes an owner image at `assets/owner.png` and a new Mission & Team section on the homepage.
+
+## Real brand assets added
+
+This version includes the real uploaded brand images:
+
+- `assets/logo.png`
+- `assets/storefront-real.png`
+- `assets/nail-stations-real.png`
+- `assets/pedicure-area-real.png`
+- `assets/nail-art-real.png`
+
+The homepage header and footer use the real logo. The CTA and gallery use the real storefront and spa photos.
