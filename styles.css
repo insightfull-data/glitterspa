@@ -427,3 +427,107 @@ p { margin: 0; }
   .services-grid { grid-template-columns: 1fr; }
   .price-list { grid-template-columns: 1fr; }
 }
+
+/* ─── MOBILE IMPROVEMENTS ─────────────────────────────────── */
+
+/* Tighter touch targets and spacing on small screens */
+@media (max-width: 560px) {
+  /* Typography scale down */
+  h1 { font-size: clamp(2.2rem, 9vw, 3rem); }
+  h2 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  h3 { font-size: 1.4rem; }
+
+  /* Header: logo + hamburger only, no wasted space */
+  .nav-wrap {
+    grid-template-columns: auto auto;
+    min-height: 64px;
+    gap: .75rem;
+  }
+  .menu-toggle { font-size: 1.5rem; }
+  .brand-logo img { width: 140px; }
+
+  /* Mobile nav drops over full width */
+  .site-nav {
+    inset: 64px .5rem auto .5rem;
+    border-radius: 14px;
+    font-size: 1rem;
+    gap: .15rem;
+  }
+  .site-nav a {
+    padding: .65rem .75rem;
+    border-radius: 8px;
+    display: block;
+  }
+  .site-nav a:hover { background: var(--surface-soft); }
+
+  /* Hero: full-width image below copy */
+  .hero { padding: 1.5rem 0 1.5rem; }
+  .hero-grid { gap: 1.25rem; }
+  .hero-copy { padding-right: 0; }
+  .hero-media img { min-height: 240px; border-radius: var(--radius); }
+  .hero-actions { flex-direction: column; gap: .75rem; }
+  .hero-actions .btn { width: 100%; text-align: center; }
+
+  /* Buttons full-width on mobile */
+  .btn { min-height: 48px; font-size: .97rem; }
+
+  /* About split: image first, text below */
+  .split-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .split-copy { padding: 0; }
+
+  /* Mission blocks: more padding breathing room */
+  .mission-block { padding: 1.15rem; }
+
+  /* Gallery: single column already set, improve image height */
+  .gallery-card img { aspect-ratio: 16 / 9; }
+
+  /* Services: single column with smaller images */
+  .service-card img { aspect-ratio: 16 / 9; }
+  .service-content { padding: .85rem 1rem; }
+
+  /* Prices: full-width list, stacked */
+  .prices-card { padding: 1.15rem; }
+  .prices-media { display: none; } /* hide decorative image on tiny screens */
+  .price-list { gap: .65rem 0; }
+  .price-list div { padding-bottom: .45rem; }
+
+  /* Testimonial: tighter */
+  .quote-card { padding: 1.15rem; font-size: .97rem; }
+
+  /* CTA: stack and full-width buttons */
+  .cta-card { padding: 1.15rem; gap: 1rem; }
+  .cta-actions { flex-direction: column; }
+  .cta-actions .btn { width: 100%; }
+  .cta-media { display: none; } /* hide decorative storefront on tiny screens */
+
+  /* Footer: single column, tighter */
+  .footer-grid { gap: 1.25rem; }
+  .footer-grid h3 { font-size: 1.3rem; margin-bottom: .5rem; }
+  .site-footer { padding-top: 2rem; }
+  .footer-bottom { padding: 1rem 0 1.5rem; font-size: .88rem; }
+
+  /* Local SEO card */
+  .local-seo-card { padding: 1.15rem; }
+
+  /* Section spacing */
+  .section { padding: 1.75rem 0; }
+  .section-heading { margin-bottom: 1.1rem; }
+  .section-intro { font-size: .95rem; }
+
+  /* Container side padding */
+  .container { width: min(100% - 1.25rem, var(--container)); }
+}
+
+/* Mid-range tablet fixes (561px – 860px) */
+@media (min-width: 561px) and (max-width: 860px) {
+  .hero-actions { flex-wrap: nowrap; }
+  .split-card { padding: 1.25rem; gap: 1.25rem; }
+  .prices-card { padding: 1.25rem; }
+  .cta-card { padding: 1.15rem; gap: 1rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: .85rem; }
+  .mission-block { padding: 1.25rem; }
+}
